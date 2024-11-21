@@ -33,3 +33,12 @@ pip install -U -r requirements.txt
 python train.py --img 640 --batch 16 --epochs 10 --data ./data.yaml --weights yolov5s.pt
 # 학습된 모델로 이미지 추론
 python detect.py --weights runs/train/exp/weights/best.pt --img 640 --source path/to/images
+# 데이터셋 주소
+https://universe.roboflow.com/insanudin-skhkb/object-detection-f1l7m \
+## 테스트 및 평가
+학습 후, 다음 명령어로 모델을 평가할 수 있습니다:
+```bash
+python test.py --weights runs/train/exp/weights/best.pt --data data.yaml
+
+## 라이선스
+이 프로젝트는 MIT 라이선스 하에 제공됩니다 - 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
